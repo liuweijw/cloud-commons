@@ -37,7 +37,7 @@ public class HttpResult {
 		return this;
 	}
 	
-	public HttpResult resultCode(int code) {
+	public HttpResult code(int code) {
 		this.code = code;
 		return this;
 	}
