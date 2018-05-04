@@ -31,7 +31,7 @@
 
     <groupId>com.github.liuweijw</groupId>
     <artifactId>cloud-commons</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
 	<name>liuweijw cloud commons</name>

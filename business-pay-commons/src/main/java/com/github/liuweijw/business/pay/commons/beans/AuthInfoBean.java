@@ -23,14 +23,24 @@ public class AuthInfoBean implements Serializable {
 	private String openId;
 	
 	/**
+	 * 微信id 可能为空
+	 */
+	private String	wechatId;
+	
+	/**
 	 * 微信昵称
 	 */
 	private String nickName;
 
 	/**
+	 * 性别描述
+	 */
+	private String	sexDesc;
+	
+	/**
 	 * 性别
 	 */
-	private String sex;
+	private Integer	sex;
 	
 	/**
 	 * 语言
@@ -58,7 +68,7 @@ public class AuthInfoBean implements Serializable {
 	private String headImgUrl;
 	
 	/**
-	 * 描述
+	 * 描述 
 	 */
 	private String remark;
 
@@ -86,11 +96,27 @@ public class AuthInfoBean implements Serializable {
 		this.nickName = nickName;
 	}
 
-	public String getSex() {
+	public String getWechatId() {
+		return wechatId;
+	}
+
+	public void setWechatId(String wechatId) {
+		this.wechatId = wechatId;
+	}
+
+	public String getSexDesc() {
+		return sexDesc;
+	}
+
+	public void setSexDesc(String sexDesc) {
+		this.sexDesc = sexDesc;
+	}
+
+	public Integer getSex() {
 		return sex;
 	}
 
-	public void setSex(String sex) {
+	public void setSex(Integer sex) {
 		this.sex = sex;
 	}
 
