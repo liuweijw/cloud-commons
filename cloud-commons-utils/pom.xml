@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cloud-commons-utils</artifactId>
+    <groupId>com.github.liuweijw.commons</groupId>
+    <packaging>jar</packaging>
+
+    <name>cloud-commons-utils</name>
+    <description>基础依赖工具类</description>
+
+    <parent>
+    	<groupId>com.github.liuweijw</groupId>
+        <artifactId>cloud-commons</artifactId>
+        <version>1.0.5-SNAPSHOT</version>
+    </parent>
+    
+    <dependencies>
+    	<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        
+        <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+    </dependencies>
+    
+</project>

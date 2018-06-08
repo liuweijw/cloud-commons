@@ -31,7 +31,7 @@
 
     <groupId>com.github.liuweijw</groupId>
     <artifactId>cloud-commons</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
 	<name>liuweijw cloud commons</name>
@@ -71,25 +71,66 @@
         <java.version>1.8</java.version>
         <fastjson.version>1.2.30</fastjson.version>
         <commons.version>3.5</commons.version>
+        <lombok.version>1.16.20</lombok.version>
+		<swagger2.version>2.9.0</swagger2.version>
+		<cloud-commons.version>1.0.5-SNAPSHOT</cloud-commons.version>
     </properties>
 
 	<modules>
-		<module>business-pay-commons</module>
+		<module>cloud-commons-base</module>
+		<module>cloud-commons-utils</module>
+		<module>cloud-commons-pay</module>
 	</modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
-        </dependency>
-    </dependencies>
-
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.github.liuweijw.commons</groupId>
+				<artifactId>cloud-commons-utils</artifactId>
+				<version>${cloud-commons.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.github.liuweijw.commons</groupId>
+				<artifactId>cloud-commons-base</artifactId>
+				<version>${cloud-commons.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.github.liuweijw.commons</groupId>
+				<artifactId>cloud-commons-pay</artifactId>
+				<version>${cloud-commons.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.github.liuweijw.commons</groupId>
+				<artifactId>cloud-commons-wechat</artifactId>
+				<version>${cloud-commons.version}</version>
+			</dependency>
+			
+	        <dependency>
+	            <groupId>org.apache.commons</groupId>
+	            <artifactId>commons-lang3</artifactId>
+	            <version>${commons.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>com.alibaba</groupId>
+	            <artifactId>fastjson</artifactId>
+	            <version>${fastjson.version}</version>
+	        </dependency>
+	        <dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+	    </dependencies>
+	</dependencyManagement>
+    
     <build>
         <pluginManagement>
             <plugins>
