@@ -20,7 +20,7 @@ public class R<T> implements Serializable {
 	@ApiModelProperty(value = "返回提示语信息，默认'success'")
 	private String				msg					= RConstant.SUCCESS_MSG;
 
-	@ApiModelProperty(value = "返回编码：0 成功 -1 失败 -2 未登录 -3 没权限")
+	@ApiModelProperty(value = "返回编码：0 成功")
 	private int					code				= RConstant.SUCCESS;
 
 	@ApiModelProperty(value = "返回业务数据")

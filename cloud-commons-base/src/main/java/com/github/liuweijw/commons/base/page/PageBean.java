@@ -6,6 +6,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.List;
 
+import com.github.liuweijw.commons.base.constant.GlobalConstant;
+
 /**
  * 分页逻辑
  * 
@@ -26,14 +28,14 @@ public class PageBean<T> implements Serializable {
 	/**
 	 * 当前页码
 	 */
-	@ApiModelProperty(value = "当前页码")
-	private Integer				currentPage			= 0;
+	@ApiModelProperty(value = "当前页码，默认1")
+	private Integer				currentPage			= 1;
 
 	/**
 	 * 每页多少条 limit
 	 */
-	@ApiModelProperty(value = "每页多少条")
-	private Integer				pageSize			= 0;
+	@ApiModelProperty(value = "每页多少条,默认10条")
+	private Integer				pageSize			= GlobalConstant.PAGE_NUM;
 
 	// redis jackson list 必须是ArrayList类型，如果是java.util.Collections$UnmodifiableRandomAccessList将会报错
 	@ApiModelProperty(value = "列表数据")

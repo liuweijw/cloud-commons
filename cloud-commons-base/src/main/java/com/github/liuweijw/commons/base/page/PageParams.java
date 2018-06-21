@@ -16,14 +16,14 @@ public class PageParams {
 	/**
 	 * 当前页码
 	 */
-	@ApiModelProperty(value = "当前页码")
-	private Integer	currentPage;
+	@ApiModelProperty(value = "当前页码，默认1")
+	private Integer	currentPage	= 1;
 
 	/**
 	 * 每页多少条 limit
 	 */
-	@ApiModelProperty(value = "每页多少条")
-	private Integer	pageSize;
+	@ApiModelProperty(value = "每页多少条，默认10条")
+	private Integer	pageSize	= GlobalConstant.PAGE_NUM;
 
 	public Integer getCurrentPage() {
 		currentPage = (null == currentPage || currentPage <= 0) ? 1 : currentPage;
