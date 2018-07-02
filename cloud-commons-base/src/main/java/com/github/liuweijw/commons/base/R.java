@@ -5,6 +5,9 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 
+import lombok.Data;
+import lombok.ToString;
+
 import com.github.liuweijw.commons.base.constant.RConstant;
 
 /**
@@ -12,6 +15,8 @@ import com.github.liuweijw.commons.base.constant.RConstant;
  *
  * @author liuweijw
  */
+@Data
+@ToString
 @ApiModel(description = "请求返回封装")
 public class R<T> implements Serializable {
 
@@ -70,30 +75,6 @@ public class R<T> implements Serializable {
 
 	public static R<String> of(final String msg, final int code) {
 		return new R<String>().code(code).failure(msg);
-	}
-
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-
-	public int getCode() {
-		return code;
-	}
-
-	public void setCode(int code) {
-		this.code = code;
-	}
-
-	public T getData() {
-		return data;
-	}
-
-	public void setData(T data) {
-		this.data = data;
 	}
 
 }

@@ -31,7 +31,7 @@
 
     <groupId>com.github.liuweijw</groupId>
     <artifactId>cloud-commons</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.6-SNAPSHOT</version>
     <packaging>pom</packaging>
 
 	<name>liuweijw cloud commons</name>
@@ -73,13 +73,15 @@
         <commons.version>3.5</commons.version>
         <lombok.version>1.16.20</lombok.version>
 		<swagger2.version>2.9.0</swagger2.version>
-		<cloud-commons.version>1.0.5-SNAPSHOT</cloud-commons.version>
+		<spring-boot.version>1.5.12.RELEASE</spring-boot.version>
+		<cloud-commons.version>1.0.6-SNAPSHOT</cloud-commons.version>
     </properties>
 
 	<modules>
 		<module>cloud-commons-base</module>
 		<module>cloud-commons-utils</module>
 		<module>cloud-commons-pay</module>
+		<module>cloud-commons-config</module>
 	</modules>
 
 	<dependencyManagement>
@@ -128,6 +130,12 @@
 				<artifactId>lombok</artifactId>
 				<version>${lombok.version}</version>
 			</dependency>
+			
+			<dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot</artifactId>
+	            <version>${spring-boot.version}</version>
+	        </dependency>
 	    </dependencies>
 	</dependencyManagement>
     
