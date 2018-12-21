@@ -12,7 +12,7 @@
     <parent>
     	<groupId>com.github.liuweijw</groupId>
         <artifactId>cloud-commons</artifactId>
-        <version>1.0.6-SNAPSHOT</version>
+        <version>1.0.7-SNAPSHOT</version>
     </parent>
 
 	<dependencies>
