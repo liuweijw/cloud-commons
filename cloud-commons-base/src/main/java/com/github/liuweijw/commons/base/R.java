@@ -1,14 +1,13 @@
 package com.github.liuweijw.commons.base;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import java.io.Serializable;
 
+import com.github.liuweijw.commons.base.constant.RConstant;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
-
-import com.github.liuweijw.commons.base.constant.RConstant;
 
 /**
  * 响应信息主体
@@ -27,6 +26,9 @@ public class R<T> implements Serializable {
 
 	@ApiModelProperty(value = "返回编码：0 成功")
 	private int					code				= RConstant.SUCCESS;
+
+	@ApiModelProperty(value = "返回时间")
+	private long				rettime				= System.currentTimeMillis();
 
 	@ApiModelProperty(value = "返回业务数据")
 	private T					data;
