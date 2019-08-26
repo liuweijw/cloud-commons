@@ -69,6 +69,11 @@ public class PayUnifiedOrder implements Serializable {
 	private String				notifyUrl;
 
 	/**
+	 * 业务返回地址 选填
+	 */
+	private String				returnUrl;
+
+	/**
 	 * 扩展参数1 选填
 	 */
 	private String				param1;
